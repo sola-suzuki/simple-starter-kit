@@ -20,7 +20,5 @@
     "url": "https://github.com/sola-suzuki/simple-starter-kit/issues"
   },
   "homepage": "https://github.com/sola-suzuki/simple-starter-kit#readme",
-  "dependencies": {
-    "fs-copy": "^1.0.0"
-  }
+  "dependencies": {}
 }
