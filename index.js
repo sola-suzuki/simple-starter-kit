@@ -23,7 +23,7 @@ const copy = function(src, dest) {
 }
 
 if (fs.readdirSync(dest).length) {
-  throw new Error('Directory not empty')
+  throw new Error('Directory not empty');
 }
 
 copy(src, dest)
