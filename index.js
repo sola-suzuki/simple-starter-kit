@@ -1,7 +1,5 @@
 #! /usr/bin/env node
 
-function main() {
-  console.log("Hello world!");
-}
+const copy = require('fs-copy');
 
-main();
+copy(`${__dirname}/src`, './');
