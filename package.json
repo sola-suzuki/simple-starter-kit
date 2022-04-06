@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-    "hello": "index.js"
+    "simple-starter-kit": "index.js"
   },
   "repository": {
     "type": "git",
@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/sola-suzuki/simple-starter-kit/issues"
   },
-  "homepage": "https://github.com/sola-suzuki/simple-starter-kit#readme"
+  "homepage": "https://github.com/sola-suzuki/simple-starter-kit#readme",
+  "dependencies": {
+    "fs-copy": "^1.0.0"
+  }
 }
