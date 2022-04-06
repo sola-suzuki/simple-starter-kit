@@ -2,4 +2,4 @@
 
 const copy = require('fs-copy');
 
-copy(`${__dirname}/src`, './');
+copy(`${__dirname}/src`, process.cwd());
