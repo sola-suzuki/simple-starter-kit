@@ -1,7 +1,7 @@
 # Install
 
 ```
-$ npx sola-suzuki/simple-starter-kit
+$ npx simple-starter-kit
 ```
 
 # Result
