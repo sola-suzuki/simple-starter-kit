@@ -27,3 +27,6 @@ if (fs.readdirSync(dest).length) {
 }
 
 copy(src, dest)
+
+const ignore = `${dest}/.gitignore`
+!fs.existsSync(ignore) && fs.writeFileSync(ignore, 'dist/\nnode_modules/')
