@@ -22,11 +22,14 @@ const copy = function(src, dest) {
   }
 }
 
-if (fs.readdirSync(dest).length) {
+const isEmpty = fs.readdirSync(dest).filter(function(key) {
+  return key !== '.git'
+}).length === 0;
+if (!isEmpty) {
   throw new Error('Directory not empty');
 }
 
-copy(src, dest)
+copy(src, dest);
 
-const ignore = `${dest}/.gitignore`
-!fs.existsSync(ignore) && fs.writeFileSync(ignore, 'dist/\nnode_modules/')
+const ignore = `${dest}/.gitignore`;
+!fs.existsSync(ignore) && fs.writeFileSync(ignore, 'dist/\nnode_modules/');
