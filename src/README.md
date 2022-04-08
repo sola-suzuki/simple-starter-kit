@@ -1,11 +1,11 @@
 # Install
 
 ```
-$ npm install
+$ yarn
 ```
 
 # Develop
 
 ```
-$ npm start
+$ yarn start
 ```
