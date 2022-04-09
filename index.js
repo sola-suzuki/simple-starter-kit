@@ -1,35 +1,21 @@
 #! /usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
+const fs = require('fs')
+const fse = require('fs-extra')
+const path = require('path')
 
-const src = `${__dirname}/src`;
-const dest = `${path.resolve()}`;
+const src = `${__dirname}/src`
+const dest = `${path.resolve()}`
 
-const copy = function(src, dest) {
-  if (fs.existsSync(src)) {
-    const stats = fs.statSync(src);
-    const isDirectory = stats.isDirectory();
+const exclude = ['.git']
 
-    if (isDirectory) {
-      !fs.existsSync(dest) && fs.mkdirSync(dest);
-      fs.readdirSync(src).forEach(function(key) {
-        copy(path.join(src, key), path.join(dest, key));
-      });
-    } else {
-      fs.linkSync(src, dest);
-    }
-  }
-}
+const files = fs.readdirSync(dest)
+const isEmpty = files.filter(item => exclude.indexOf(item) === -1).length === 0
 
-const isEmpty = fs.readdirSync(dest).filter(function(key) {
-  return key !== '.git'
-}).length === 0;
 if (!isEmpty) {
-  throw new Error('Directory not empty');
+  throw new Error('Directory not empty')
 }
 
-copy(src, dest);
+fse.copySync(src, dest)
 
-const ignore = `${dest}/.gitignore`;
-!fs.existsSync(ignore) && fs.writeFileSync(ignore, 'dist/\nnode_modules/');
+fs.writeFileSync(`${dest}/.gitignore`, 'dist/\nnode_modules/');
