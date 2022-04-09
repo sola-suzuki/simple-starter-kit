@@ -1,6 +1,6 @@
 {
   "name": "simple-starter-kit",
-  "version": "2.1.5",
+  "version": "2.1.6",
   "description": "Development environment with pug, stylus, webpack and browser-sync",
   "main": "index.js",
   "scripts": {
