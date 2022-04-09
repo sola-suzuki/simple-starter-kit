@@ -11,12 +11,23 @@
     "type": "git",
     "url": "git+https://github.com/sola-suzuki/simple-starter-kit.git"
   },
-  "keywords": ["npx", "simple", "starter", "kit", "pug", "stylus", "js", "serve"],
+  "keywords": [
+    "npx",
+    "simple",
+    "starter",
+    "kit",
+    "pug",
+    "stylus",
+    "js",
+    "serve"
+  ],
   "author": "Sora Suzuki",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/sola-suzuki/simple-starter-kit/issues"
   },
   "homepage": "https://github.com/sola-suzuki/simple-starter-kit#readme",
-  "dependencies": {}
+  "dependencies": {
+    "fs-extra": "^10.0.1"
+  }
 }
