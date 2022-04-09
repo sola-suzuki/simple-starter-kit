@@ -1,7 +1,7 @@
 {
   "name": "simple-starter-kit",
-  "version": "1.0.0",
-  "description": "",
+  "version": "2.1.4",
+  "description": "Development environment with pug, stylus, webpack and browser-sync",
   "main": "index.js",
   "scripts": {
     "test": "mkdir -p dist && cd $_ && node ../index.js"
