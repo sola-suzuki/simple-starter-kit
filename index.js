@@ -8,7 +8,6 @@ const src = `${__dirname}/src`
 const dest = `${path.resolve()}`
 
 const exclude = ['.git']
-const invisible = ['.gitignore']
 
 const files = fs.readdirSync(dest)
 const isEmpty = files.filter(item => exclude.indexOf(item) === -1).length === 0
@@ -18,4 +17,5 @@ if (!isEmpty) {
 }
 
 fse.copySync(src, dest)
-invisible.forEach(item => fse.pathExistsSync(`${dest}/${item}`) || fse.copySync(`${src}/${item}`, `${dest}/${item}`))
+
+fs.writeFileSync(`${dest}/.gitignore`, 'dist/\nnode_modules/');
