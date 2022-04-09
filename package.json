@@ -11,7 +11,7 @@
     "type": "git",
     "url": "git+https://github.com/sola-suzuki/simple-starter-kit.git"
   },
-  "keywords": [],
+  "keywords": ["npx", "simple", "starter", "kit", "pug", "stylus", "js", "serve"],
   "author": "Sora Suzuki",
   "license": "MIT",
   "bugs": {
