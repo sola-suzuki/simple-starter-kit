@@ -18,8 +18,8 @@
     "kit",
     "pug",
     "stylus",
-    "js",
-    "serve"
+    "webpack",
+    "browser-sync"
   ],
   "author": "Sora Suzuki",
   "license": "MIT",
