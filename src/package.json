@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "start": "run-p pug stylus webpack serve",
-    "pug": "pug -w src/html --out dist",
+    "pug": "pug -w src/html/ --out dist",
     "stylus": "stylus -w src/css/index.styl -o dist/css/app.css",
     "webpack": "webpack -w --mode=production",
     "serve": "browser-sync start --server dist --files **/*"
