@@ -5,10 +5,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "run-p pug stylus js serve",
+    "start": "run-p pug stylus webpack serve",
     "pug": "pug -w src/html --out dist",
     "stylus": "stylus -w src/css/index.styl -o dist/css/app.css",
-    "js": "webpack -w --mode=production",
+    "webpack": "webpack -w --mode=production",
     "serve": "browser-sync start --server dist --files **/*"
   },
   "keywords": [],
