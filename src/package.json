@@ -5,10 +5,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "run-p pug stylus js serve",
-    "pug": "pug -w src/html --out dist",
-    "stylus": "stylus -w src/css/index.styl -o dist/css/app.css",
-    "js": "webpack -w --mode=production",
+    "start": "run-p pug stylus webpack copy serve",
+    "pug": "pug -w src/html/ --out dist",
+    "stylus": "stylus -w src/css/index.styl -o dist/assets/css/app.css",
+    "webpack": "webpack -w --mode=production",
+    "copy": "cpx -w -v src/static/**/* dist",
     "serve": "browser-sync start --server dist --files **/*"
   },
   "keywords": [],
@@ -17,6 +18,7 @@
   "dependencies": {},
   "devDependencies": {
     "browser-sync": "^2.27.9",
+    "cpx": "^1.5.0",
     "npm-run-all": "^4.1.5",
     "pug-cli": "^1.0.0-alpha6",
     "stylus": "^0.57.0",

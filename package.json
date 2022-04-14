@@ -1,6 +1,6 @@
 {
   "name": "simple-starter-kit",
-  "version": "2.1.8",
+  "version": "2.2.0",
   "description": "Development environment with pug, stylus, webpack and browser-sync",
   "main": "index.js",
   "scripts": {
@@ -18,8 +18,8 @@
     "kit",
     "pug",
     "stylus",
-    "js",
-    "serve"
+    "webpack",
+    "browser-sync"
   ],
   "author": "Sora Suzuki",
   "license": "MIT",
